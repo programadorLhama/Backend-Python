@@ -17,8 +17,8 @@ def test_route():
     response = register_user_router.route(HttpRequest(body=attributes))
 
     # Testing input
-    assert register_user_use_case.registry_param["name"] == attributes["name"]
-    assert register_user_use_case.registry_param["password"] == attributes["password"]
+    assert register_user_use_case.register_param["name"] == attributes["name"]
+    assert register_user_use_case.register_param["password"] == attributes["password"]
 
     # Testing output
     assert response.status_code == 200
@@ -34,7 +34,7 @@ def test_route_error_no_body():
     response = register_user_router.route(HttpRequest())
 
     # Testing input
-    assert register_user_use_case.registry_param == {}
+    assert register_user_use_case.register_param == {}
 
     # Testing output
     assert response.status_code == 400
@@ -51,7 +51,7 @@ def test_route_error_wrong_body():
     response = register_user_router.route(HttpRequest(body=attributes))
 
     # Testing input
-    assert register_user_use_case.registry_param == {}
+    assert register_user_use_case.register_param == {}
 
     # Testing output
     assert response.status_code == 422

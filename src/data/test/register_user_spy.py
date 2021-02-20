@@ -8,13 +8,13 @@ class RegisterUserSpy:
 
     def __init__(self, user_repository: any):
         self.user_repository = user_repository
-        self.registry_param = {}
+        self.register_param = {}
 
-    def registry(self, name: str, password: str) -> Dict[bool, Users]:
+    def register(self, name: str, password: str) -> Dict[bool, Users]:
         """ Registry user """
 
-        self.registry_param["name"] = name
-        self.registry_param["password"] = password
+        self.register_param["name"] = name
+        self.register_param["password"] = password
 
         response = None
         validate_entry = isinstance(name, str) and isinstance(password, str)
