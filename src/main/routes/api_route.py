@@ -14,7 +14,7 @@ def register_user():
 
     if response.status_code < 300:
         message = {
-            "Type": "users",
+            "type": "users",
             "id": response.body.id,
             "attributest": {"name": response.body.name},
         }
