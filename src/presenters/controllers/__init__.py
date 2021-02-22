@@ -1,1 +1,4 @@
 from .register_user_controller import RegisterUserController
+from .register_pet_controller import RegisterPetController
+from .find_user_controller import FindUserController
+from .find_pet_controller import FindPetController

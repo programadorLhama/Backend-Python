@@ -18,3 +18,9 @@ class HttpErrors:
         """ HTTP 409 """
 
         return {"status_code": 409, "body": {"error": "Conflict"}}
+
+    @staticmethod
+    def error_500():
+        """ HTTP 500 """
+
+        return {"status_code": 500, "body": {"error": "Internal Server Error"}}
